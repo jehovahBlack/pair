@@ -21,20 +21,20 @@ foreach ($pr in $prs) {
     }
 }
 
-Write-Host "`n🎯 Pull Shark 合并 PR 总数: $totalMergedPRs"
+Write-Host "`n Pull Shark 合并 PR 总数: $totalMergedPRs"
 
 switch ($totalMergedPRs) {
-    {$_ -lt 4} {"🦈 Pull Shark 等级: 🥉 Bronze"}
-    {$_ -lt 16} {"🦈 Pull Shark 等级: 🥈 Silver"}
-    {$_ -lt 64} {"🦈 Pull Shark 等级: 🥇 Gold"}
-    default {"🦈 Pull Shark 等级: 💎 Platinum"}
+    {$_ -lt 4} {" Pull Shark 等级:  Bronze"}
+    {$_ -lt 16} {" Pull Shark 等级:  Silver"}
+    {$_ -lt 64} {" Pull Shark 等级:  Gold"}
+    default {" Pull Shark 等级:  Platinum"}
 }
 
-Write-Host "`n👥 Pair Extraordinaire 共同协作 PR 总数: $coAuthoredCount"
+Write-Host "`n Pair Extraordinaire 共同协作 PR 总数: $coAuthoredCount"
 
 switch ($coAuthoredCount) {
-    {$_ -lt 4} {"👥 Pair Extraordinaire 等级: 🥉 Bronze"}
-    {$_ -lt 16} {"👥 Pair Extraordinaire 等级: 🥈 Silver"}
-    {$_ -lt 64} {"👥 Pair Extraordinaire 等级: 🥇 Gold"}
-    default {"👥 Pair Extraordinaire 等级: 💎 Platinum"}
+    {$_ -lt 4} {" Pair Extraordinaire 等级:  Bronze"}
+    {$_ -lt 16} {" Pair Extraordinaire 等级:  Silver"}
+    {$_ -lt 64} {" Pair Extraordinaire 等级:  Gold"}
+    default {" Pair Extraordinaire 等级:  Platinum"}
 }

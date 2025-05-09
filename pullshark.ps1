@@ -1,4 +1,3 @@
-$OutputEncoding = New-Object -typename System.Text.UTF8Encoding
 
 # 设置：修改为你自己的信息
 $repeat_count = 2  # 提交次数：建议每次不要超过 100
@@ -9,7 +8,7 @@ $pr_body = "Auto contribution by hesphoros for Pull Shark"
 
 for ($i = 1; $i -le $repeat_count; $i++) 
 {
-    Write-Host "开始第 $i 次 PR 操作..."
+    Write-Host "start $i  PR "
 
     # 创建唯一分支名
     $timestamp = Get-Date -Format "yyyyMMddHHmmssfff"
@@ -29,9 +28,9 @@ for ($i = 1; $i -le $repeat_count; $i++)
     gh pr create --title "$pr_title #$i" --body "$pr_body #$i" --base main --head $branch_name
 
     # 合并并删除分支
-    gh pr merge --merge --delete-branch
+    gh pr merge --merge --delete-branch --auto
 
-    Write-Host "✅ PR #$i completed. Waiting for GitHub to sync Pull Shark achievement."
+    Write-Host " PR #$i completed. Waiting for GitHub to sync Pull Shark achievement."
 
 
     Start-Sleep -Seconds 5
