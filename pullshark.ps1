@@ -1,3 +1,5 @@
+$OutputEncoding = New-Object -typename System.Text.UTF8Encoding
+
 # 设置：修改为你自己的信息
 $repeat_count = 2  # 提交次数：建议每次不要超过 100
 $co_author_name = "jehovahBlack"
@@ -5,8 +7,9 @@ $co_author_email = "luciferau@163.com"
 $pr_title = "Boost Pull Shark"
 $pr_body = "Auto contribution by hesphoros for Pull Shark"
 
-for ($i = 1; $i -le $repeat_count; $i++) {
-    Write-Host "➡️ 开始第 $i 次 PR 操作..."
+for ($i = 1; $i -le $repeat_count; $i++) 
+{
+    Write-Host "开始第 $i 次 PR 操作..."
 
     # 创建唯一分支名
     $timestamp = Get-Date -Format "yyyyMMddHHmmssfff"
@@ -28,9 +31,11 @@ for ($i = 1; $i -le $repeat_count; $i++) {
     # 合并并删除分支
     gh pr merge --merge --delete-branch
 
-    Write-Host "✅ 第 $i 次 PR 已完成。等待 GitHub 同步 Pull Shark 成就。`n"
+    Write-Host "✅ PR #$i completed. Waiting for GitHub to sync Pull Shark achievement."
+
 
     Start-Sleep -Seconds 5
 }
 
-Write-Host "🎉 所有 $repeat_count 次操作已完成！Pull Shark 成就即将提升！"
+Write-Host "All $repeat_count operations completed! Pull Shark achievement will be boosted soon!"
+
