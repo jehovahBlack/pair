@@ -10,7 +10,7 @@ Add-Content -Path "README.md" -Value "`nPaired contribution on $(Get-Date)"
 
 # 添加改动并提交，包含 Co-authored-by 头
 git add .
-git commit -m "Paired contribution`nCo-authored-by: jehovahBlack <1481458358@qq.com>"
+git commit -m "Paired contribution`nCo-authored-by: jehovahBlack <luciferau@163.com>"
 
 # 推送新分支
 git push origin $branch_name
