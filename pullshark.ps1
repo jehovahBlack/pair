@@ -1,7 +1,7 @@
 $OutputEncoding = New-Object -typename System.Text.UTF8Encoding
 
 # 设置：修改为你自己的信息
-$repeat_count = 2  # 提交次数：建议每次不要超过 100
+$repeat_count = 50  # 提交次数：建议每次不要超过 100
 $co_author_name = "jehovahBlack"
 $co_author_email = "luciferau@163.com"
 $pr_title = "Boost Pull Shark"
@@ -34,7 +34,7 @@ for ($i = 1; $i -le $repeat_count; $i++)
     Write-Host "✅ PR #$i completed. Waiting for GitHub to sync Pull Shark achievement."
 
 
-    Start-Sleep -Seconds 5
+    Start-Sleep -Seconds 10
 }
 
 Write-Host "All $repeat_count operations completed! Pull Shark achievement will be boosted soon!"
